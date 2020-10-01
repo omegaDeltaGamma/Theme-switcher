@@ -1,0 +1,131 @@
+$lime-green: hsl(163, 72%, 41%);
+$bright-red: hsl(356, 69%, 56%);
+$facebook: hsl(208, 92%, 53%);
+$instagram: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+$twitter: hsl(203, 89%, 53%);
+$youtube: hsl(348, 97%, 39%);
+$dark-toggle: linearGradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+$light-toggle: hsl(230, 22%, 74%);
+//Dark theme
+$vdark-blue1: hsl(230, 17%, 14%);
+$vdark-blue2: hsl(232, 19%, 15%);
+$dark-desaturated-blue: hsl(228, 28%, 20%);
+$desaturated-blue: hsl(228, 34%, 66%);
+$white: hsl(0, 0%, 100%);
+//Light theme
+$vpale-blue: hsl(225, 100%, 98%);
+$light-grayish-blue: hsl(227, 47%, 96%);
+$dark-grayish-blue: hsl(228, 12%, 44%);
+$vdark-blue: hsl(230, 17%, 14%);
+
+
+* {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+}
+
+.background {
+    background: $vpale-blue;
+    height: 150px;
+    padding: 50px 130px;
+}
+
+.title {
+    color: $vdark-blue;
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.total {
+    color: $dark-grayish-blue;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.button-area {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.btext {
+    color: $dark-grayish-blue;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.big-results {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.result {
+    height: 220px;
+    width: 230px;
+    border-radius: 3px;
+    padding: 25px 50px;
+    background: $light-grayish-blue;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.channel {
+    font-weight: 700;
+    color: $dark-grayish-blue;
+    font-size: 12px;
+    margin: 0 5px;
+}
+
+.number {
+    font-weight: 700;
+    color: $vdark-blue;
+    font-size: 50px;
+}
+
+.letter {
+    font-weight: 400;
+    color: $dark-grayish-blue;
+    letter-spacing: 6px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.arrow-number {
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.green {
+    color: $lime-green;
+}
+
+.red {
+    color: $bright-red;
+}
+
+.facebook {
+    border-top: 3px solid $facebook;
+}
+
+.twitter {
+    border-top: 3px solid $twitter;
+}
+
+.instagram {
+    border-top: 3px solid $instagram;
+}
+
+.youtube {
+    border-top: 3px solid $youtube;
+}
+
+
+
+
+
+
+/*.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }*/

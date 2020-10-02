@@ -1,10 +1,8 @@
 $lime-green: hsl(163, 72%, 41%);
 $bright-red: hsl(356, 69%, 56%);
 $facebook: hsl(208, 92%, 53%);
-$instagram: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
 $twitter: hsl(203, 89%, 53%);
 $youtube: hsl(348, 97%, 39%);
-$dark-toggle: linearGradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
 $light-toggle: hsl(230, 22%, 74%);
 //Dark theme
 $vdark-blue1: hsl(230, 17%, 14%);
@@ -29,7 +27,7 @@ $vdark-blue: hsl(230, 17%, 14%);
 .background {
     background: $vpale-blue;
     height: 150px;
-    padding: 50px 130px;
+    padding: 40px 130px;
 }
 
 .title {
@@ -55,6 +53,68 @@ $vdark-blue: hsl(230, 17%, 14%);
     color: $dark-grayish-blue;
     font-weight: 700;
     font-size: 14px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+  
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $light-toggle;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 4px;
+    background-color: $white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+input:checked + .slider {
+    background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+  
+input:focus + .slider {
+    box-shadow: 0 0 1px linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+    background: $vdark-blue1;
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
 }
 
 .big-results {
@@ -115,16 +175,137 @@ $vdark-blue: hsl(230, 17%, 14%);
 }
 
 .instagram {
-    border-top: 3px solid $instagram;
+    border-top: 3px solid;
+    border-image: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%)) 1;
 }
 
 .youtube {
     border-top: 3px solid $youtube;
 }
 
+.second-title {
+    font-weight: 700;
+    color: $dark-grayish-blue;
+    font-size: 20px;
+    margin: 10px 0;
+}
 
+.small-results {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+}
 
+.sresult {
+    height: 100px;
+    width: 230px;
+    background: $light-grayish-blue;
+    box-sizing: border-box;
+    margin: 10px 0px;
+    border-radius: 3px;
+    padding: 20px;
+}
 
+.sletter {
+    font-weight: 700;
+    color: $dark-grayish-blue;
+    font-size: 12px;
+}
+
+.snumber {
+    font-weight: 700;
+    color: $vdark-blue;
+    font-size: 22px;
+    margin-top: 12px;
+}
+
+.img {
+    margin-left: 90px;
+}
+
+.sresult {
+    .arrow-number {
+        margin-right: -120px;
+    }
+}
+
+.up, .down {
+    margin-left: 120px;
+}
+
+.n2, .n3, .n6, .n7 {
+    .img {
+    margin-left: 125px;
+    }
+}
+
+.n3 {
+    .arrow-number {
+        margin-right: -90px;
+    }
+
+    .up {
+        margin-left: 70px;
+    }
+}
+
+.n4 {
+    img {
+        margin-left: 80px;
+    }
+
+    .arrow-number {
+        margin-right: -110px;
+    }
+
+    .up {
+        margin-left: 90px;
+    }
+}
+
+.n5 {
+    .img {
+        margin-left: 100px;
+    }
+
+    .arrow-number {
+        margin-right: -110px;
+    }
+
+    .up {
+        margin-left: 100px;
+    }
+}
+
+.n6 {
+    .arrow-number {
+        margin-right: -120px;
+    }
+
+    .up {
+        margin-left: 90px;
+    } 
+}
+
+.n7 {
+    .arrow-number {
+        margin-right: -110px;
+    }
+    
+    .down {
+        margin-left: 105px;
+    }
+}
+
+.n8 {
+    .arrow-number {
+        margin-right: -100px;
+    }
+    
+    .down {
+        margin-left: 90px;
+    }
+}
 
 
 /*.attribution { font-size: 11px; text-align: center; }

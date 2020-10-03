@@ -115,6 +115,21 @@
       </div>
     </div>
   </div>
-  <script href="script.js"></script>  
+  <script type="text/javascript">
+    var switcher = document.querySelector("input");
+
+    function themeSwitch() {
+
+      if(switcher.checked) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+      else {
+        document.documentElement.setAttribute("data-theme", "light")
+      }
+    }
+
+   switcher.addEventListener("click", themeSwitch, false);
+
+  </script>  
 </body>
 </html>

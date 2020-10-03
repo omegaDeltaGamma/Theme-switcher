@@ -52,6 +52,10 @@ body {
   font-size: 12px;
 }
 
+hr {
+  visibility: hidden;
+}
+
 .button-area {
   display: flex;
   align-items: flex-start;
@@ -68,7 +72,7 @@ body {
   position: relative;
   display: inline-block;
   width: 50px;
-  height: 25px;
+  height: 23px;
   margin-left: 10px;
   margin-bottom: 10px;
 }
@@ -94,10 +98,10 @@ body {
 .slider:before {
   position: absolute;
   content: "";
-  height: 18px;
-  width: 18px;
+  height: 17px;
+  width: 17px;
   left: 4px;
-  bottom: 4px;
+  bottom: 3px;
   background-color: var(--background-color);
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -291,4 +295,116 @@ input:checked + .slider:before {
   margin-left: 90px;
 }
 
+@media screen and (max-width: 480px) {
+  .background {
+    padding: 50px 50px;
+  }
+
+  hr {
+    visibility: visible;
+    width: 350px;
+    margin: 10px 0;
+    border-top: 1px solid var(--submain-text-color);
+  }
+
+  .button-area {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .big-results {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  .result {
+    margin: 15px 0;
+    width: 370px;
+  }
+
+  .small-results {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 1fr);
+  }
+
+  .sresult {
+    width: 380px;
+  }
+
+  .n2 .img, .n3 .img, .n6 .img, .n7 .img {
+    margin-left: 280px;
+  }
+
+  .n1 .img {
+    margin-left: 242px;
+  }
+  .n1 .arrow-number {
+    margin-right: -275px;
+  }
+  .n1 .up {
+    margin-left: 275px;
+  }
+
+  .n2 .arrow-number {
+    margin-right: -275px;
+  }
+  .n2 .down {
+    margin-left: 275px;
+  }
+
+  .n3 .arrow-number {
+    margin-right: -222px;
+  }
+  .n3 .up {
+    margin-left: 222px;
+  }
+
+  .n4 .img {
+    margin-left: 235px;
+  }
+  .n4 .arrow-number {
+    margin-right: -240px;
+  }
+  .n4 .up {
+    margin-left: 240px;
+  }
+
+  .n5 .img {
+    margin-left: 255px;
+  }
+  .n5 .arrow-number {
+    margin-right: -250px;
+  }
+  .n5 .up {
+    margin-left: 250px;
+  }
+
+  .n6 .arrow-number {
+    margin-right: -240px;
+  }
+  .n6 .up {
+    margin-left: 240px;
+  }
+
+  .n7 .arrow-number {
+    margin-right: -257px;
+  }
+  .n7 .down {
+    margin-left: 257px;
+  }
+
+  .n8 .img {
+    margin-left: 245px;
+  }
+  .n8 .arrow-number {
+    margin-right: -245px;
+  }
+  .n8 .down {
+    margin-left: 245px;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
+
